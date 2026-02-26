@@ -1,59 +1,45 @@
 ---
-name: mirror-council
-description: "🧠 Consejo multi-agente interno."
+name: Mirror Council
+description: "🧠 Internal multi-agent council for local debate, critique and consensus."
+when: "When a user request matches mirror-council capabilities or requires this domain-specific workflow."
+examples:
+  - "Run Mirror Council for this task"
+  - "Apply Mirror Council to solve this workflow"
 metadata:
-  {
-    "openclaw": {
-      "emoji": "🧠",
-      "version": "0.2.0",
-      "author": "smouj",
-      "lang_default": "en"
-    }
-  }
+  openclaw:
+    requires: ["fs_read", "fs_write", "shell_exec", "memory_search"]
+  safety_level: high
+  version: "1.0.0"
+  author: "smouj"
+  tags: ["mirror-council", "automation", "openclaw-skill"]
 ---
 
 # 🧠 Mirror Council
 
 ## Purpose
-Framework de consejo interno multi-agente que permite debate, validación cruzada y consenso sin exponer datos sensibles a proveedores externos.
+Multi-agente interno para debate sin leaks: crea espejos con perspectivas diferentes y resuelve dilemas por consenso local.
 
-## Tags
-- security
-- reliability
-- automation
-- openclaw-skill
+## How to Use / Core Instructions
+1. Primero piensa en alcance, riesgo y coste.
+2. Luego valida inputs y dependencias mínimas.
+3. Ejecuta en pasos pequeños y reversibles.
+4. Verifica resultado con checks explícitos.
+5. Si hay error, falla seguro y reporta causa + próximo paso.
 
-## Execution contract
-1. Validate request and constraints.
-2. Generate minimal safe plan.
-3. Execute in reversible steps.
-4. Verify with explicit checks.
-5. Return concise summary + next actions.
+## Security & Safety Guidelines
+Nunca ejecutes código sospechoso sin sandbox. Reporta riesgos al usuario. No envíes datos sensibles fuera del entorno local.
 
-## Inputs expected
-- Goal
-- Constraints (time/cost/privacy)
-- Optional files/URLs
+## Tools Required
+- fs_read
+- fs_write
+- shell_exec
+- memory_search
 
-## Outputs
-- Plan
-- Actions executed
-- Verification results
-- Rollback notes
+## Example Flows
+- Entrada -> validación -> plan -> ejecución -> verificación -> reporte.
+- Reintento controlado con rollback si falla.
 
-## Guardrails
-- Never expose secrets.
-- No destructive operation without explicit confirmation.
-- Fail safe with actionable diagnostics.
-
-## Commands
-```bash
-# Placeholder entrypoint
-printf "mirror-council: validate -> execute -> verify\n"
-```
-
-## Test checklist
-- [ ] Happy path
-- [ ] Error handling
-- [ ] Idempotency
-- [ ] Guardrails respected
+## Edge Cases & Error Handling
+- Input incompleto: pedir datos mínimos.
+- Dependencia ausente: degradar en modo seguro.
+- Error persistente: detener, registrar y escalar.
