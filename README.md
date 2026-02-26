@@ -1,11 +1,16 @@
 # 🪞 Mirror Council
 
 <p align="center">
-  <img src="https://img.shields.io/badge/OpenClaw%20Skill-Mirror%20Council-111827?style=for-the-badge&logo=github" alt="Mirror Council banner" />
+  <img src="https://img.shields.io/badge/Skill-Mirror%20Council-111827?style=for-the-badge&logo=github" alt="Mirror Council badge" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Initiating-22d3ee?style=flat-square" alt="status" />
+  <img src="https://img.shields.io/badge/Dificultad-Alta-8b5cf6?style=flat-square" alt="dificultad" />
 </p>
 
 ## Purpose
-Framework de múltiples agentes internos que permiten debate, validación cruzada y consenso entre diferentes perspectivas sin necesidad de exponer datos a APIs externas, usando modelos locales o integrado en memoria.
+Multi-agente interno para debate sin exponer datos externos.
 
 ## Status
 Initiating
