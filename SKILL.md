@@ -2,7 +2,7 @@
 name: mirror-council
 description: >
   Mirror Council skill for multi-agent operations in multi-agent ecosystems. Use when tasks require multi-agent analysis, automation, and safe execution workflows.
-version: "1.0.0"
+version: "1.0.1"
 tags: [multi-agent, ai-agents, openclaw]
 metadata:
   author: smouj
