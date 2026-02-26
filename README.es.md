@@ -1,36 +1,68 @@
-# 🧠 Mirror Council
+# Mirror Council
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Skill-Mirror%20Council-111827?style=for-the-badge&logo=github" alt="Mirror Council banner" />
-</p>
+[![Language: English](https://img.shields.io/badge/Language-English-blue.svg)](README.md)
+[![Idioma: Español](https://img.shields.io/badge/Idioma-Espa%C3%B1ol-green.svg)](README.es.md)
 
-<p align="center">
-  <a href="./README.md"><img src="https://img.shields.io/badge/README-English-1f6feb?style=for-the-badge" alt="English"></a>
-  <a href="./README.es.md"><img src="https://img.shields.io/badge/README-Español-c92a2a?style=for-the-badge" alt="Español"></a>
-</p>
+Skill especializada para operaciones de **multi-agent** en entornos multiagente (OpenClaw/KiloCode).
 
-## Resumen
-Multi-agente interno para debate sin leaks: crea espejos con perspectivas diferentes y resuelve dilemas por consenso local.
+## Descripción general
 
-## Instalación
-```bash
-git clone https://github.com/smouj/Mirror-Council.git
-cd Mirror-Council
-cat SKILL.es.md
-```
+Mirror Council permite ejecutar tareas de multi-agent con un flujo seguro, reproducible y trazable.
 
-## Arquitectura de entendimiento
-```mermaid
-flowchart LR
-  A[Entrada] --> B[Validar alcance]
-  B --> C[Plan seguro]
-  C --> D[Ejecutar]
-  D --> E[Verificar]
-  E --> F[Reportar]
-```
+## Cuándo usar
 
-## Estado
-Iniciando
+- Necesitas ejecución estructurada en el dominio **multi-agent**.
+- Quieres resultados reproducibles (plan, verificación y rollback).
+- Necesitas guardrails explícitos de seguridad y control del operador.
 
-## Dificultad
-Alta
+## Capacidades principales
+
+- Activación por triggers para escenarios de multi-agent.
+- Flujo de 4 pasos (análisis, planificación, ejecución, validación).
+- Formato de salida estandarizado para operación y reporte.
+- Guardrails security-first.
+
+## Entradas
+
+- Objetivo y alcance
+- Entorno/contexto (repo, VPS, servicio, etc.)
+- Restricciones y tolerancia al riesgo
+
+## Salidas
+
+- Resumen operativo
+- Plan aplicado
+- Cambios realizados
+- Evidencia de verificación
+- Pasos de rollback
+- Riesgo residual
+
+## Archivos
+
+- `SKILL.md` → Especificación en inglés
+- `SKILL.es.md` → Especificación en español
+- `README.md` → Documentación en inglés
+- `README.es.md` → Documentación en español
+
+## Límites y guardrails
+
+- Nunca exponer secretos.
+- Nunca ejecutar acciones destructivas sin confirmación explícita.
+- Preferir cambios mínimos y reversibles.
+
+## Troubleshooting
+
+1. Verificar acceso a herramientas/autenticación.
+2. Revalidar alcance y conectividad del entorno.
+3. Reducir a cambio mínimo seguro.
+4. Reintentar con comandos de verificación explícitos.
+
+## Ejemplo rápido
+
+**Input:** "Audita y mejora el flujo de multi-agent."
+
+**Salida esperada:**
+- Alcance + plan
+- Ejecución segura
+- Comandos de verificación
+- Procedimiento de rollback
